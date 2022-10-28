@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodzy/Forget.dart';
 import 'package:foodzy/onboarding/page3.dart';
 import 'package:foodzy/signupscreen.dart';
@@ -16,26 +17,26 @@ class signinscreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Center(
             child: Column(children: [
-              const SizedBox(
-                height: 30,
+              SizedBox(
+                height: 30.h,
               ),
               Row(
                 children: [
-                  const SizedBox(
-                    width: 20,
+                   SizedBox(
+                    width: 20.w,
                   ),
                   GestureDetector(
-                    child: const Icon(
+                    child: Icon(
                       Icons.arrow_back_ios,
-                      size: 17,
+                      size: 17.r,
                     ),
                     onTap: () {
                       Navigator.pushNamedAndRemoveUntil(
                           context, Splashscreen.idScreen, (route) => false);
                     },
                   ),
-                  const SizedBox(
-                    width: 130,
+                   SizedBox(
+                    width: 130.w,
                   ),
                   const Text(
                     "SIGN IN",
@@ -44,49 +45,51 @@ class signinscreen extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 50,
+                height: 50.h,
               ),
               Row(
                 children: [
                   SizedBox(
-                    width: 20,
+                    width: 20.w,
                   ),
                   Text(
                     "Welcome To Foodzy",
                     style: GoogleFonts.poppins(
-                        fontSize: 22, fontWeight: FontWeight.bold),
+                        fontSize: 22.sp, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 10,
+               SizedBox(
+                height: 10.h,
               ),
               Row(
                 children: [
                   SizedBox(
-                    width: 20,
+                    width: 20.w,
                   ),
                   Text(
                     "Enter your phone number and\npassword to Sign in.",
                     style: GoogleFonts.poppins(
-                        fontSize: 13, fontWeight: FontWeight.w400),
+                        fontSize: 13.sp, fontWeight: FontWeight.w400),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 50,
+               SizedBox(
+                height: 50.h,
               ),
               Row(
-                children: const [
+                children:  [
                   SizedBox(
-                    width: 30,
+                    width: 30.w,
                   ),
-                  Text("Phone Number"),
+                  Text(
+                  "Phone Number",
+                  style: GoogleFonts.poppins (fontSize: 14.sp,fontWeight: FontWeight.w400)),
                 ],
               ),
-              const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25),
-                  child: TextField(
+               Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.r),
+                  child: const TextField(
                     decoration: InputDecoration(
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -98,20 +101,20 @@ class signinscreen extends StatelessWidget {
                         )),
                         hintText: "  Enter your phone number"),
                   )),
-              const SizedBox(
-                height: 10,
+              SizedBox(
+                height: 10.h,
               ),
               Row(
-                children: const [
+                children:  [
                   SizedBox(
-                    width: 30,
+                    width: 30.w,
                   ),
-                  Text("Password"),
+                  const Text("Password"),
                 ],
               ),
-              const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 25),
-                  child: TextField(
+               Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 25.r),
+                  child: const TextField(
                     decoration: InputDecoration(
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(
@@ -123,25 +126,25 @@ class signinscreen extends StatelessWidget {
                         )),
                         hintText: "  ......."),
                   )),
-              const SizedBox(
-                height: 15,
+               SizedBox(
+                height: 15.h,
               ),
               GestureDetector(
-                child: const Text(
-                  "Forgot Password ?",
-                  style: TextStyle(fontWeight: FontWeight.w300),
+                child: Text(
+                  "Forgot Password",
+                  style: GoogleFonts.urbanist(fontSize: 12.sp,fontWeight: FontWeight.w400),
                 ),
                 onTap: () {
                   Navigator.pushNamedAndRemoveUntil(
                       context, forget.idScreen, (route) => false);
                 },
               ),
-              const SizedBox(
-                height: 30,
+              SizedBox(
+                height: 30.h,
               ),
               MaterialButton(
-                minWidth: 350,
-                height: 44,
+                minWidth: 350.w,
+                height: 44.h,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10)),
                 color: const Color.fromRGBO(34, 34, 59, 1),
@@ -149,21 +152,21 @@ class signinscreen extends StatelessWidget {
                 child: Text(
                   "SIGN IN",
                   style: GoogleFonts.poppins(
-                      fontSize: 13,
+                      fontSize: 13.sp,
                       color: Colors.white,
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              const SizedBox(
-                height: 10,
+               SizedBox(
+                height: 10.h,
               ),
               const Text("OR"),
-              const SizedBox(
-                height: 10,
+            SizedBox(
+                height: 10.h,
               ),
               SizedBox(
-                width: 350,
-                height: 44,
+                width: 350.w,
+                height: 44.h,
                 child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor:
@@ -185,40 +188,40 @@ class signinscreen extends StatelessWidget {
 
                     child: Row(
                       children: [
-                        const SizedBox(
-                          width: 80,
+                         SizedBox(
+                          width: 80.w,
                         ),
                         const Image(image: AssetImage("images/google.png")),
-                        const SizedBox(
-                          width: 10,
+                         SizedBox(
+                          width: 10.w,
                         ),
                         Text("Continue with Google",
                             style: GoogleFonts.poppins(
-                                fontSize: 13,
+                                fontSize: 13.sp,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.black)),
                       ],
                     )),
               ),
-              const SizedBox(
-                height: 50,
+             SizedBox(
+                height: 50.h,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 35),
+                padding:  EdgeInsets.symmetric(horizontal: 35.r),
                 child: GestureDetector(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      SizedBox(
-                        width: 10,
+                       SizedBox(
+                        width: 10.w,
                       ),
                       Text("Dont have an account ?",
                           style: GoogleFonts.poppins(
-                              fontSize: 10, fontWeight: FontWeight.w400)),
+                              fontSize: 12.sp, fontWeight: FontWeight.w600)),
                       Text(
                         "Create an account",
                         style: GoogleFonts.poppins(
-                            fontSize: 11, fontWeight: FontWeight.w400),
+                            fontSize: 12.sp, fontWeight: FontWeight.w400),
                       )
                     ],
                   ),

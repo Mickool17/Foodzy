@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodzy/onboarding/page1.dart';
 import 'package:foodzy/onboarding/page2.dart';
 import 'package:foodzy/onboarding/page3.dart';
@@ -38,26 +39,26 @@ class _SplashscreenState extends State<Splashscreen> {
     return Scaffold(
         backgroundColor: Colors.white,
         body: Column(children: [
-          const SizedBox(
-            height: 80,
+          SizedBox(
+            height: 80.h,
           ),
           GestureDetector(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
+              children:  [
                 Text(
                   "Skip",
-                  style: TextStyle(color: Colors.black),
+                  style: GoogleFonts.urbanist(fontSize: 16.sp,fontWeight: FontWeight.w400),
                 ),
                 SizedBox(
-                  width: 5,
+                  width: 5.w,
                 ),
                 Icon(
                   Icons.arrow_forward_ios,
-                  size: 10,
+                  size: 10.r,
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 30.w,
                 )
               ],
             ),
@@ -67,7 +68,7 @@ class _SplashscreenState extends State<Splashscreen> {
           ),
           SizedBox(
             child: Container(
-              height: 500,
+              height: 500.h,
               child: PageView(
                 controller: _controller,
                 onPageChanged: (index) {
@@ -89,20 +90,20 @@ class _SplashscreenState extends State<Splashscreen> {
             controller: _controller,
             count: 3,
             axisDirection: Axis.horizontal,
-            effect: const SlideEffect(
-              dotHeight: 6,
-              dotWidth: 6,
-              dotColor: Color.fromARGB(34, 34, 59, 1),
-              activeDotColor: Color.fromRGBO(34, 34, 59, 1),
+            effect:  SlideEffect(
+              dotHeight: 6.h,
+              dotWidth: 6.w,
+              dotColor: const Color.fromARGB(34, 34, 59, 1),
+              activeDotColor: const Color.fromRGBO(34, 34, 59, 1),
             ),
           ),
-          const SizedBox(
-            height: 100,
+           SizedBox(
+            height: 100.h,
           ),
           onLastPage
               ? MaterialButton(
-                  minWidth: 350,
-                  height: 40,
+                  minWidth: 350.w,
+                  height: 40.h,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   color: const Color.fromRGBO(34, 34, 59, 1),
@@ -113,14 +114,14 @@ class _SplashscreenState extends State<Splashscreen> {
                   child: Text(
                     "Get Started ",
                     style: GoogleFonts.poppins(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),
                 )
               : MaterialButton(
-                  minWidth: 350,
-                  height: 40,
+                  minWidth: 350.w,
+                  height: 40.h,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   color: const Color.fromRGBO(34, 34, 59, 1),
@@ -130,7 +131,7 @@ class _SplashscreenState extends State<Splashscreen> {
                   child: Text(
                     "Next",
                     style: GoogleFonts.poppins(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),

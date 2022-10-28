@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:foodzy/addphone.dart';
 import 'package:foodzy/onboarding/page3.dart';
 import 'package:foodzy/signinscreen.dart';
@@ -23,19 +24,19 @@ class _signupscreenState extends State<signupscreen> {
           child: Center(
          
               child: Column(children: [
-                const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: 30.h,
                 ),
                 Row(
-                 mainAxisAlignment: MainAxisAlignment.start,
+              
                   children: [
-                    const SizedBox(
-                      width: 20,
+                     SizedBox(
+                      width: 20.w,
                     ),
                     GestureDetector(
-                      child: const Icon(
+                      child:  Icon(
                         Icons.arrow_back_ios,
-                        size: 17,
+                        size: 17.r,
                       ),
                       onTap: () {
                         Navigator.pushNamedAndRemoveUntil(
@@ -43,56 +44,58 @@ class _signupscreenState extends State<signupscreen> {
                       },
                     ),
                    
+                    SizedBox(width: 120.w,),
                     
-                    
-                    const Text(
-                        "SIGN Up",
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                     Text(
+                  "Sign Up",
+                  style: GoogleFonts.urbanist(fontSize: 16.sp,fontWeight: FontWeight.w700),
                       ),
                     
                   ],
                 ),
-                SizedBox(height: 50,),
+                SizedBox(height: 50.h,),
                Row(
                     children: [
-                      SizedBox(width: 20,),
+                      SizedBox(width: 20.w,),
                       Text(
                         " Create An Account",
                         style: GoogleFonts.poppins(
-                            fontSize: 22, fontWeight: FontWeight.bold),
+                            fontSize: 22.sp, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
                 
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 10.h,
                 ),
                 Row(
                   children: [
-                    const SizedBox(
-                      width: 20,
+                     SizedBox(
+                      width: 25.w,
                     ),
                     Text(
                       "Enter your name, Email address and\npassword for signup.",
                       style: GoogleFonts.poppins(
-                          fontSize: 13, fontWeight: FontWeight.w400),
+                          fontSize: 13.sp, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 50,
+                 SizedBox(
+                  height: 50.h,
                 ),
                 Row(
-                  children: const [
+                  children: [
                     SizedBox(
-                      width: 30,
+                      width: 30.w,
                     ),
-                    Text("Full Name"),
+                    Text(
+                  "Full Name",
+                  style: GoogleFonts.poppins(fontSize: 14.sp,fontWeight: FontWeight.w400)),
                   ],
                 ),
-                const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: TextField(
+                 Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25.r),
+                    child: const TextField(
                       decoration: InputDecoration(
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
@@ -104,20 +107,22 @@ class _signupscreenState extends State<signupscreen> {
                           )),
                           hintText: "  Enter your full Name"),
                     )),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 20.h,
                 ),
                 Row(
-                  children: const [
+                  children:  [
                     SizedBox(
-                      width: 30,
+                      width: 30.w,
                     ),
-                    Text("Email Address"),
+                    Text(
+                  "Email Address",
+                  style: GoogleFonts.poppins(fontSize: 14.sp,fontWeight: FontWeight.w400)),
                   ],
                 ),
-                const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: TextField(
+                 Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25.r),
+                    child: const TextField(
                       decoration: InputDecoration(
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
@@ -129,20 +134,22 @@ class _signupscreenState extends State<signupscreen> {
                           )),
                           hintText: " Enter your email address"),
                     )),
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: 20.h,
                 ),
                 Row(
-                  children: const [
+                  children: [
                     SizedBox(
-                      width: 30,
+                      width: 30.w,
                     ),
-                    Text("Password"),
+                    Text(
+                  "Password",
+                  style: GoogleFonts.poppins(fontSize: 14.sp,fontWeight: FontWeight.w400)),
                   ],
                 ),
-                const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 25),
-                    child: TextField(
+                 Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25.r),
+                    child: const TextField(
                       decoration: InputDecoration(
                           enabledBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
@@ -154,12 +161,12 @@ class _signupscreenState extends State<signupscreen> {
                           )),
                           hintText: "  ......."),
                     )),
-                const SizedBox(
-                  height: 25,
+                 SizedBox(
+                  height: 25.h,
                 ),
                 MaterialButton(
-                  minWidth: 350,
-                  height: 44,
+                  minWidth: 350.w,
+                  height: 44.h,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   color: const Color.fromRGBO(34, 34, 59, 1),
@@ -170,7 +177,7 @@ class _signupscreenState extends State<signupscreen> {
                   child: Text(
                     "SIGN UP",
                     style: GoogleFonts.poppins(
-                        fontSize: 13,
+                        fontSize: 13.sp,
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),
@@ -178,27 +185,29 @@ class _signupscreenState extends State<signupscreen> {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text("OR"),
-                const SizedBox(
-                  height: 10,
+              Text(
+                  "OR",
+                  style: GoogleFonts.urbanist(fontSize: 14.sp,fontWeight: FontWeight.w400)),
+                SizedBox(
+                  height: 10.h,
                 ),
                 SizedBox(
-                  width: 350,
-                  height: 44,
+                  width: 350.w,
+                  height: 44.h,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           backgroundColor:
                               Colors.white, //background color of button
-                          side: const BorderSide(
-                            width: 2,
+                          side:  BorderSide(
+                            width: 2.w,
                             color: Color.fromRGBO(34, 34, 59, 1),
                           ), //border width and color
                           elevation: 3, //elevation of button
                           shape: RoundedRectangleBorder(
                               //to set border radius to button
                               borderRadius: BorderRadius.circular(8)),
-                          padding: const EdgeInsets.all(
-                              10) //content padding inside button
+                          padding: EdgeInsets.all(
+                              10.r) //content padding inside button
                           ),
                       onPressed: () {},
 
@@ -206,38 +215,38 @@ class _signupscreenState extends State<signupscreen> {
 
                       child: Row(
                         children: [
-                          const SizedBox(
-                            width: 80,
+                          SizedBox(
+                            width: 80.w,
                           ),
                           const Image(image: AssetImage("images/google.png")),
-                          const SizedBox(
-                            width: 10,
+                           SizedBox(
+                            width: 10.w,
                           ),
                           Text("Continue with Google",
                               style: GoogleFonts.poppins(
-                                  fontSize: 13,
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.black)),
                         ],
                       )),
                 ),
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 50.h,
                 ),
                 GestureDetector(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const SizedBox(
-                        width: 10,
+                       SizedBox(
+                        width: 10.w,
                       ),
                       Text("Already have an account ?",
                           style: GoogleFonts.poppins(
-                              fontSize: 10, fontWeight: FontWeight.w400)),
+                              fontSize: 12.sp, fontWeight: FontWeight.w600)),
                       Text(
                         "Sign in",
                         style: GoogleFonts.poppins(
-                            fontSize: 11, fontWeight: FontWeight.w400),
+                            fontSize: 12.sp, fontWeight: FontWeight.w400),
                       )
                     ],
                   ),

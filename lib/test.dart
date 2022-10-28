@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class test extends StatefulWidget {
   static String idScreen = "test";
@@ -24,7 +25,7 @@ class _testState extends State<test> {
             Column(
               children: [
                 Container(
-                  height: 250,
+                  height: 250.h,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("images/Rectangle.png"),
