@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodzy/Forget.dart';
 import 'package:foodzy/onboarding/page3.dart';
 import 'package:foodzy/signupscreen.dart';
 import 'package:foodzy/splashscreen.dart';
@@ -42,32 +43,36 @@ class signinscreen extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 50,),
-                Row(
-                  children: [
-                    SizedBox(width: 20,),
-                    Text(
-                      "Welcome To Foodzy",
-                      style: GoogleFonts.poppins(
-                          fontSize: 22, fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-              
+              SizedBox(
+                height: 50,
+              ),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    "Welcome To Foodzy",
+                    style: GoogleFonts.poppins(
+                        fontSize: 22, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
               const SizedBox(
                 height: 10,
               ),
               Row(
                 children: [
-                   SizedBox(width: 20,),
+                  SizedBox(
+                    width: 20,
+                  ),
                   Text(
-                      "Enter your phone number and\npassword to Sign in.",
-                      style: GoogleFonts.poppins(
-                          fontSize: 13, fontWeight: FontWeight.w400),
-                    ),
+                    "Enter your phone number and\npassword to Sign in.",
+                    style: GoogleFonts.poppins(
+                        fontSize: 13, fontWeight: FontWeight.w400),
+                  ),
                 ],
               ),
-              
               const SizedBox(
                 height: 50,
               ),
@@ -126,7 +131,10 @@ class signinscreen extends StatelessWidget {
                   "Forgot Password ?",
                   style: TextStyle(fontWeight: FontWeight.w300),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, forget.idScreen, (route) => false);
+                },
               ),
               const SizedBox(
                 height: 30,

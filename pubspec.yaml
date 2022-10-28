@@ -39,6 +39,9 @@ dependencies:
   smooth_page_indicator: ^1.0.0+2
   google_fonts: ^3.0.1
   flutter_screenutil: ^5.5.4
+  flutter_native_splash: ^2.2.12
+ 
+  
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +53,13 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+
+  
+
+
+flutter_native_splash: 
+  background_image: images/splashscreen.png
+
  
 
 # For information on the generic Dart part of this file, see the

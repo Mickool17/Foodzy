@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodzy/addphone.dart';
 import 'package:foodzy/onboarding/page3.dart';
 import 'package:foodzy/signinscreen.dart';
 import 'package:foodzy/splashscreen.dart';
@@ -162,7 +163,10 @@ class _signupscreenState extends State<signupscreen> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10)),
                   color: const Color.fromRGBO(34, 34, 59, 1),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,addphone.idScreen, (route) => false);
+                  },
                   child: Text(
                     "SIGN UP",
                     style: GoogleFonts.poppins(
