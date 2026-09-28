@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodzy/Forget.dart';
+import 'package:foodzy/forget.dart';
 import 'package:foodzy/onboarding/page3.dart';
 import 'package:foodzy/signupscreen.dart';
 import 'package:foodzy/splashscreen.dart';

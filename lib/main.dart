@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:foodzy/Forget.dart';
+import 'package:foodzy/forget.dart';
 import 'package:foodzy/addphone.dart';
 import 'package:foodzy/onboarding/page1.dart';
 import 'package:foodzy/onboarding/page2.dart';
